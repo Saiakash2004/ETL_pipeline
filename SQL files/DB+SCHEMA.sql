@@ -1,0 +1,29 @@
+-- Switch to the ACCOUNTADMIN role for required privileges
+USE ROLE ACCOUNTADMIN;
+
+-- Create the warehouse if it does not exist
+CREATE WAREHOUSE IF NOT EXISTS CUSTOMER360
+    COMMENT = 'Warehouse for Customer 360 Project'
+    WAREHOUSE_SIZE = 'X-SMALL'
+    AUTO_RESUME = TRUE
+    AUTO_SUSPEND = 60
+    ENABLE_QUERY_ACCELERATION = FALSE
+    WAREHOUSE_TYPE = 'STANDARD'
+    MIN_CLUSTER_COUNT = 1
+    MAX_CLUSTER_COUNT = 1
+    SCALING_POLICY = 'STANDARD'
+    INITIALLY_SUSPENDED = TRUE;
+
+-- Use the newly created warehouse
+USE WAREHOUSE CUSTOMER360;
+
+-- Create or replace the main Customer 360 database
+CREATE OR REPLACE DATABASE CUSTOMER360;
+
+-- Create or replace the layered schemas
+CREATE OR REPLACE SCHEMA CUSTOMER360.BRONZE_LAYER;
+CREATE OR REPLACE SCHEMA CUSTOMER360.SILVER_LAYER;
+CREATE OR REPLACE SCHEMA CUSTOMER360.GOLD_LAYER;
+
+-- Set the context to the bronze layer schema
+USE SCHEMA CUSTOMER360.BRONZE_LAYER;
