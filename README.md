@@ -1,10 +1,10 @@
-# 📊 Customer 360: The Customer's Choice
+# Customer 360: The Customer's Choice
 
 **Customer 360** is a modern, cloud-based retail analytics platform designed to streamline online shopping experiences. It integrates customer behavior, transaction patterns, and sales performance into a unified system. With interactive dashboards and personalized insights, it empowers businesses to make data-driven decisions and enhance customer satisfaction.
 
 ---
 
-## 🧩 Problem Statement
+## Problem Statement
 
 Customer 360 is focused on delivering a unified, data-driven understanding of customer behavior to support strategic business decisions. However, critical customer-related data—such as profile details, support ticket information, transaction records, and web interaction logs—are fragmented across various systems.
 
@@ -16,7 +16,7 @@ With this end-to-end architecture, Customer 360 can deliver accurate analytics, 
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 | Technology                | Purpose                                                                 |
 |---------------------------|-------------------------------------------------------------------------|
@@ -28,7 +28,7 @@ With this end-to-end architecture, Customer 360 can deliver accurate analytics, 
 
 ---
 
-## 🧪 Software Requirements
+## Software Requirements
 
 - Microsoft Azure Subscription
 - Snowflake Account
@@ -37,7 +37,7 @@ With this end-to-end architecture, Customer 360 can deliver accurate analytics, 
 
 ---
 
-## 📂 Data Sources
+## Data Sources
 
 The following `.xlsx` files serve as input to the pipeline. All files are initially stored in **Azure Blob Storage** and later transformed in the pipeline.
 
